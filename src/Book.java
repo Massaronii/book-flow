@@ -35,7 +35,7 @@ public class Book {
         return available;
     }
 
-    public void setAvailable(Boolean available) {
+    private void setAvailable(Boolean available) {
         this.available = available;
         this.updatedAt = LocalDateTime.now();
     }
@@ -54,8 +54,7 @@ public class Book {
             return;
         }
 
-        this.available = false;
-        this.updatedAt = LocalDateTime.now();
+        this.setAvailable(false);
         System.out.println("O livro '" + this.title + "' foi emprestado com sucesso.");
     }
 
@@ -65,8 +64,7 @@ public class Book {
             return;
         }
 
-        this.available = true;
-        this.updatedAt = LocalDateTime.now();
+        this.setAvailable(true);
         System.out.println("O livro '" + this.title + "' foi devolvido com sucesso.");
     }
 }
