@@ -48,23 +48,21 @@ public class Book {
         return updatedAt;
     }
 
-    public void Loan() {
+    public boolean Loan() {
         if (!this.available) {
-            System.out.println("O livro '" + this.title + "' não está disponível para empréstimo.");
-            return;
+            return false;
         }
 
         this.setAvailable(false);
-        System.out.println("O livro '" + this.title + "' foi emprestado com sucesso.");
+        return true;
     }
 
-    public void Return() {
+    public boolean Return() {
         if (this.available) {
-            System.out.println("O livro '" + this.title + "' já está disponível para empréstimo.");
-            return;
+            return false;
         }
 
         this.setAvailable(true);
-        System.out.println("O livro '" + this.title + "' foi devolvido com sucesso.");
+        return true;
     }
 }
