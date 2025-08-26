@@ -8,7 +8,7 @@ public class Author {
     private String name;
     private LocalDate dateOfBirth;
     private LocalDateTime createdAt;
-    private  LocalDateTime updatedAt;
+    private LocalDateTime updatedAt;
 
     public LocalDate getDateOfBirth() {
         return dateOfBirth;
@@ -22,7 +22,7 @@ public class Author {
         return id;
     }
 
-    public Author(String name, LocalDate dateOfBirth){
+    public Author(String name, LocalDate dateOfBirth) {
         this.id = UUID.randomUUID().toString();
         this.name = name;
         this.dateOfBirth = dateOfBirth;

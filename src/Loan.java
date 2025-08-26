@@ -1,23 +1,23 @@
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-    public class Loan {
+public class Loan {
 
-        private String id;
-        private Book book;
-        private Client client;
-        private LocalDateTime loanDate;
-        private LocalDateTime returnDate;
+    private final String id;
+    private final Book book;
+    private final Client client;
+    private final LocalDateTime loanDate;
+    private LocalDateTime returnDate;
 
-        public LocalDateTime getReturnDate() {
-            return returnDate;
-        }
+    public LocalDateTime getReturnDate() {
+        return returnDate;
+    }
 
-        public LocalDateTime getLoanDate() {
-            return loanDate;
-        }
+    public LocalDateTime getLoanDate() {
+        return loanDate;
+    }
 
-        public Book getBook() {
+    public Book getBook() {
         return book;
     }
 
@@ -29,16 +29,14 @@ import java.util.UUID;
         return id;
     }
 
-    private Loan(Book book, Client client){
+    public Loan(Book book, Client client) {
         this.id = UUID.randomUUID().toString();
         this.book = book;
         this.client = client;
         this.loanDate = LocalDateTime.now();
     }
 
-    private void Return(Book book, Client client){
-        this.book = book;
-        this.client = client;
+    public void registerReturn() {
         this.returnDate = LocalDateTime.now();
     }
 }

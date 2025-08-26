@@ -8,7 +8,7 @@ public class Client {
     private LocalDate dateOfBirth;
     private String email;
     private LocalDateTime createdAt;
-    private  LocalDateTime updatedAt;
+    private LocalDateTime updatedAt;
 
     public LocalDate getDateOfBirth() {
         return dateOfBirth;
@@ -22,11 +22,11 @@ public class Client {
         return id;
     }
 
-    public String getEmail(){
+    public String getEmail() {
         return email;
     }
 
-    public Client(String name, LocalDate dateOfBirth, String email){
+    public Client(String name, LocalDate dateOfBirth, String email) {
         this.id = UUID.randomUUID().toString();
         this.name = name;
         this.dateOfBirth = dateOfBirth;
